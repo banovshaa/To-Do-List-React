@@ -36,7 +36,7 @@ a{
     outline: none;
     border: none;
 }
-.toDoList .top button {
+.toDoList .top .add {
    background-color: transparent;
    border: none;
    color: #b02139;
@@ -54,16 +54,20 @@ a{
  .toDoList .bottom li {
    margin: 5px;
  }
- .toDoList .bottom li button{
+ .toDoList .bottom li .del, .done{
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: #b02139;
     color: #fff;
     width: 30px;
-    height: 30px;
-    
+    height: 30px;  
+ }
+ .toDoList .bottom li .del{
+    background-color: #b02139;
+ }
+ .toDoList .bottom li .done{
+   background-color: green;
  }
 
