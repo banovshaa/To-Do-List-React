@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Task from './Task'
 
 const MyToDoList = () => {
     const[task,setTask]=useState('')
@@ -30,10 +31,7 @@ const MyToDoList = () => {
                 {
                     toDoList.map((task)=>{
                         return(
-                            <li className='d-flex justify-content-between align-items-center py-1' key={task.Id}>
-                                <span>{task.Name}</span>
-                                <button onClick={()=>deleteHandler(task.Id)}>x</button>
-                            </li>
+                            <Task Id={task.Id} Name={task.Name} deleteHandler={deleteHandler}/>
                         )
                     })
                 }
